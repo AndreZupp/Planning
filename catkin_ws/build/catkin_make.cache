@@ -1,0 +1,2 @@
+planning
+-DCATKIN_DEVEL_PREFIX=/home/andreo/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/andreo/catkin_ws/install -G Unix Makefiles
