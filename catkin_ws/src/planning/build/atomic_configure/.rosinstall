@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ep/catkin_ws/src/planning/build/devel/setup.sh
