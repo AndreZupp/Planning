@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import rospy
-from from rosgraph_msgs.msg import TopicStatistics
+from rosgraph_msgs.msg import TopicStatistics
 
 def callback(data):
     rospy.loginfo(rospy.get_caller_id() + f"STAT {data}")

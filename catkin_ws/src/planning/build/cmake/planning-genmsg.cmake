@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "planning: 7 messages, 0 services")
+message(STATUS "planning: 9 messages, 0 services")
 
 set(MSG_I_FLAGS "-Iplanning:/home/ep/catkin_ws/src/planning/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg")
 
@@ -39,17 +39,27 @@ add_custom_target(_planning_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Ltp_stub_data.msg" NAME_WE)
 add_custom_target(_planning_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "planning" "/home/ep/catkin_ws/src/planning/msg/Ltp_stub_data.msg" "planning/State_machine:planning/Track_map:planning/Car_info"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "planning" "/home/ep/catkin_ws/src/planning/msg/Ltp_stub_data.msg" "planning/Track_map:planning/Car_position:planning/State_machine:planning/Car_info"
 )
 
 get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg" NAME_WE)
 add_custom_target(_planning_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "planning" "/home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg" "planning/State_machine:planning/Ray_cast:planning/Car_info"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "planning" "/home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg" "planning/Ray_cast:planning/State_machine:planning/Car_info"
 )
 
 get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Command.msg" NAME_WE)
 add_custom_target(_planning_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "planning" "/home/ep/catkin_ws/src/planning/msg/Command.msg" ""
+)
+
+get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Car_position.msg" NAME_WE)
+add_custom_target(_planning_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "planning" "/home/ep/catkin_ws/src/planning/msg/Car_position.msg" ""
+)
+
+get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg" NAME_WE)
+add_custom_target(_planning_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "planning" "/home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg" ""
 )
 
 #
@@ -85,17 +95,29 @@ _generate_msg_cpp(planning
 _generate_msg_cpp(planning
   "/home/ep/catkin_ws/src/planning/msg/Ltp_stub_data.msg"
   "${MSG_I_FLAGS}"
-  "/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Track_map.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
+  "/home/ep/catkin_ws/src/planning/msg/Track_map.msg;/home/ep/catkin_ws/src/planning/msg/Car_position.msg;/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/planning
 )
 _generate_msg_cpp(planning
   "/home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg"
   "${MSG_I_FLAGS}"
-  "/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Ray_cast.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
+  "/home/ep/catkin_ws/src/planning/msg/Ray_cast.msg;/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/planning
 )
 _generate_msg_cpp(planning
   "/home/ep/catkin_ws/src/planning/msg/Command.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/planning
+)
+_generate_msg_cpp(planning
+  "/home/ep/catkin_ws/src/planning/msg/Car_position.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/planning
+)
+_generate_msg_cpp(planning
+  "/home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/planning
@@ -128,6 +150,10 @@ add_dependencies(planning_generate_messages_cpp _planning_generate_messages_chec
 get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg" NAME_WE)
 add_dependencies(planning_generate_messages_cpp _planning_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Command.msg" NAME_WE)
+add_dependencies(planning_generate_messages_cpp _planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Car_position.msg" NAME_WE)
+add_dependencies(planning_generate_messages_cpp _planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg" NAME_WE)
 add_dependencies(planning_generate_messages_cpp _planning_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -166,17 +192,29 @@ _generate_msg_eus(planning
 _generate_msg_eus(planning
   "/home/ep/catkin_ws/src/planning/msg/Ltp_stub_data.msg"
   "${MSG_I_FLAGS}"
-  "/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Track_map.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
+  "/home/ep/catkin_ws/src/planning/msg/Track_map.msg;/home/ep/catkin_ws/src/planning/msg/Car_position.msg;/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/planning
 )
 _generate_msg_eus(planning
   "/home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg"
   "${MSG_I_FLAGS}"
-  "/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Ray_cast.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
+  "/home/ep/catkin_ws/src/planning/msg/Ray_cast.msg;/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/planning
 )
 _generate_msg_eus(planning
   "/home/ep/catkin_ws/src/planning/msg/Command.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/planning
+)
+_generate_msg_eus(planning
+  "/home/ep/catkin_ws/src/planning/msg/Car_position.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/planning
+)
+_generate_msg_eus(planning
+  "/home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/planning
@@ -209,6 +247,10 @@ add_dependencies(planning_generate_messages_eus _planning_generate_messages_chec
 get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg" NAME_WE)
 add_dependencies(planning_generate_messages_eus _planning_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Command.msg" NAME_WE)
+add_dependencies(planning_generate_messages_eus _planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Car_position.msg" NAME_WE)
+add_dependencies(planning_generate_messages_eus _planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg" NAME_WE)
 add_dependencies(planning_generate_messages_eus _planning_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -247,17 +289,29 @@ _generate_msg_lisp(planning
 _generate_msg_lisp(planning
   "/home/ep/catkin_ws/src/planning/msg/Ltp_stub_data.msg"
   "${MSG_I_FLAGS}"
-  "/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Track_map.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
+  "/home/ep/catkin_ws/src/planning/msg/Track_map.msg;/home/ep/catkin_ws/src/planning/msg/Car_position.msg;/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/planning
 )
 _generate_msg_lisp(planning
   "/home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg"
   "${MSG_I_FLAGS}"
-  "/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Ray_cast.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
+  "/home/ep/catkin_ws/src/planning/msg/Ray_cast.msg;/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/planning
 )
 _generate_msg_lisp(planning
   "/home/ep/catkin_ws/src/planning/msg/Command.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/planning
+)
+_generate_msg_lisp(planning
+  "/home/ep/catkin_ws/src/planning/msg/Car_position.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/planning
+)
+_generate_msg_lisp(planning
+  "/home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/planning
@@ -290,6 +344,10 @@ add_dependencies(planning_generate_messages_lisp _planning_generate_messages_che
 get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg" NAME_WE)
 add_dependencies(planning_generate_messages_lisp _planning_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Command.msg" NAME_WE)
+add_dependencies(planning_generate_messages_lisp _planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Car_position.msg" NAME_WE)
+add_dependencies(planning_generate_messages_lisp _planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg" NAME_WE)
 add_dependencies(planning_generate_messages_lisp _planning_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -328,17 +386,29 @@ _generate_msg_nodejs(planning
 _generate_msg_nodejs(planning
   "/home/ep/catkin_ws/src/planning/msg/Ltp_stub_data.msg"
   "${MSG_I_FLAGS}"
-  "/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Track_map.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
+  "/home/ep/catkin_ws/src/planning/msg/Track_map.msg;/home/ep/catkin_ws/src/planning/msg/Car_position.msg;/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/planning
 )
 _generate_msg_nodejs(planning
   "/home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg"
   "${MSG_I_FLAGS}"
-  "/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Ray_cast.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
+  "/home/ep/catkin_ws/src/planning/msg/Ray_cast.msg;/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/planning
 )
 _generate_msg_nodejs(planning
   "/home/ep/catkin_ws/src/planning/msg/Command.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/planning
+)
+_generate_msg_nodejs(planning
+  "/home/ep/catkin_ws/src/planning/msg/Car_position.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/planning
+)
+_generate_msg_nodejs(planning
+  "/home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/planning
@@ -371,6 +441,10 @@ add_dependencies(planning_generate_messages_nodejs _planning_generate_messages_c
 get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg" NAME_WE)
 add_dependencies(planning_generate_messages_nodejs _planning_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Command.msg" NAME_WE)
+add_dependencies(planning_generate_messages_nodejs _planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Car_position.msg" NAME_WE)
+add_dependencies(planning_generate_messages_nodejs _planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg" NAME_WE)
 add_dependencies(planning_generate_messages_nodejs _planning_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -409,17 +483,29 @@ _generate_msg_py(planning
 _generate_msg_py(planning
   "/home/ep/catkin_ws/src/planning/msg/Ltp_stub_data.msg"
   "${MSG_I_FLAGS}"
-  "/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Track_map.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
+  "/home/ep/catkin_ws/src/planning/msg/Track_map.msg;/home/ep/catkin_ws/src/planning/msg/Car_position.msg;/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/planning
 )
 _generate_msg_py(planning
   "/home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg"
   "${MSG_I_FLAGS}"
-  "/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Ray_cast.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
+  "/home/ep/catkin_ws/src/planning/msg/Ray_cast.msg;/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Car_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/planning
 )
 _generate_msg_py(planning
   "/home/ep/catkin_ws/src/planning/msg/Command.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/planning
+)
+_generate_msg_py(planning
+  "/home/ep/catkin_ws/src/planning/msg/Car_position.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/planning
+)
+_generate_msg_py(planning
+  "/home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/planning
@@ -452,6 +538,10 @@ add_dependencies(planning_generate_messages_py _planning_generate_messages_check
 get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg" NAME_WE)
 add_dependencies(planning_generate_messages_py _planning_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Command.msg" NAME_WE)
+add_dependencies(planning_generate_messages_py _planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Car_position.msg" NAME_WE)
+add_dependencies(planning_generate_messages_py _planning_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg" NAME_WE)
 add_dependencies(planning_generate_messages_py _planning_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

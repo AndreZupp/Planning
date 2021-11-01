@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/planning_generate_messages_nodejs"
   "devel/share/gennodejs/ros/planning/msg/Car_info.js"
+  "devel/share/gennodejs/ros/planning/msg/Car_position.js"
   "devel/share/gennodejs/ros/planning/msg/Command.js"
+  "devel/share/gennodejs/ros/planning/msg/Ltp_plan.js"
   "devel/share/gennodejs/ros/planning/msg/Ltp_stub_data.js"
   "devel/share/gennodejs/ros/planning/msg/Ray_cast.js"
   "devel/share/gennodejs/ros/planning/msg/State_machine.js"

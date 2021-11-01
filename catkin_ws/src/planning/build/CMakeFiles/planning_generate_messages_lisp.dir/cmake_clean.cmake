@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/planning_generate_messages_lisp"
   "devel/share/common-lisp/ros/planning/msg/Car_info.lisp"
+  "devel/share/common-lisp/ros/planning/msg/Car_position.lisp"
   "devel/share/common-lisp/ros/planning/msg/Command.lisp"
+  "devel/share/common-lisp/ros/planning/msg/Ltp_plan.lisp"
   "devel/share/common-lisp/ros/planning/msg/Ltp_stub_data.lisp"
   "devel/share/common-lisp/ros/planning/msg/Ray_cast.lisp"
   "devel/share/common-lisp/ros/planning/msg/State_machine.lisp"

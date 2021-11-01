@@ -137,6 +137,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/ep/catkin_ws/src/planning/msg/Ltp_stub_data.msg"
     "/home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg"
     "/home/ep/catkin_ws/src/planning/msg/Command.msg"
+    "/home/ep/catkin_ws/src/planning/msg/Car_position.msg"
+    "/home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg"
     )
 endif()
 

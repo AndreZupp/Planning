@@ -60,6 +60,8 @@ CMakeFiles/planning_generate_messages_nodejs: devel/share/gennodejs/ros/planning
 CMakeFiles/planning_generate_messages_nodejs: devel/share/gennodejs/ros/planning/msg/Ltp_stub_data.js
 CMakeFiles/planning_generate_messages_nodejs: devel/share/gennodejs/ros/planning/msg/Stp_stub_data.js
 CMakeFiles/planning_generate_messages_nodejs: devel/share/gennodejs/ros/planning/msg/Command.js
+CMakeFiles/planning_generate_messages_nodejs: devel/share/gennodejs/ros/planning/msg/Car_position.js
+CMakeFiles/planning_generate_messages_nodejs: devel/share/gennodejs/ros/planning/msg/Ltp_plan.js
 
 
 devel/share/gennodejs/ros/planning/msg/Car_info.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
@@ -84,16 +86,17 @@ devel/share/gennodejs/ros/planning/msg/Track_map.js: ../msg/Track_map.msg
 
 devel/share/gennodejs/ros/planning/msg/Ltp_stub_data.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 devel/share/gennodejs/ros/planning/msg/Ltp_stub_data.js: ../msg/Ltp_stub_data.msg
-devel/share/gennodejs/ros/planning/msg/Ltp_stub_data.js: ../msg/State_machine.msg
 devel/share/gennodejs/ros/planning/msg/Ltp_stub_data.js: ../msg/Track_map.msg
+devel/share/gennodejs/ros/planning/msg/Ltp_stub_data.js: ../msg/Car_position.msg
+devel/share/gennodejs/ros/planning/msg/Ltp_stub_data.js: ../msg/State_machine.msg
 devel/share/gennodejs/ros/planning/msg/Ltp_stub_data.js: ../msg/Car_info.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from planning/Ltp_stub_data.msg"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ep/catkin_ws/src/planning/msg/Ltp_stub_data.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/share/gennodejs/ros/planning/msg
 
 devel/share/gennodejs/ros/planning/msg/Stp_stub_data.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 devel/share/gennodejs/ros/planning/msg/Stp_stub_data.js: ../msg/Stp_stub_data.msg
-devel/share/gennodejs/ros/planning/msg/Stp_stub_data.js: ../msg/State_machine.msg
 devel/share/gennodejs/ros/planning/msg/Stp_stub_data.js: ../msg/Ray_cast.msg
+devel/share/gennodejs/ros/planning/msg/Stp_stub_data.js: ../msg/State_machine.msg
 devel/share/gennodejs/ros/planning/msg/Stp_stub_data.js: ../msg/Car_info.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from planning/Stp_stub_data.msg"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/share/gennodejs/ros/planning/msg
@@ -103,6 +106,16 @@ devel/share/gennodejs/ros/planning/msg/Command.js: ../msg/Command.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Javascript code from planning/Command.msg"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ep/catkin_ws/src/planning/msg/Command.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/share/gennodejs/ros/planning/msg
 
+devel/share/gennodejs/ros/planning/msg/Car_position.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+devel/share/gennodejs/ros/planning/msg/Car_position.js: ../msg/Car_position.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Javascript code from planning/Car_position.msg"
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ep/catkin_ws/src/planning/msg/Car_position.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/share/gennodejs/ros/planning/msg
+
+devel/share/gennodejs/ros/planning/msg/Ltp_plan.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+devel/share/gennodejs/ros/planning/msg/Ltp_plan.js: ../msg/Ltp_plan.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Javascript code from planning/Ltp_plan.msg"
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/share/gennodejs/ros/planning/msg
+
 planning_generate_messages_nodejs: CMakeFiles/planning_generate_messages_nodejs
 planning_generate_messages_nodejs: devel/share/gennodejs/ros/planning/msg/Car_info.js
 planning_generate_messages_nodejs: devel/share/gennodejs/ros/planning/msg/State_machine.js
@@ -111,6 +124,8 @@ planning_generate_messages_nodejs: devel/share/gennodejs/ros/planning/msg/Track_
 planning_generate_messages_nodejs: devel/share/gennodejs/ros/planning/msg/Ltp_stub_data.js
 planning_generate_messages_nodejs: devel/share/gennodejs/ros/planning/msg/Stp_stub_data.js
 planning_generate_messages_nodejs: devel/share/gennodejs/ros/planning/msg/Command.js
+planning_generate_messages_nodejs: devel/share/gennodejs/ros/planning/msg/Car_position.js
+planning_generate_messages_nodejs: devel/share/gennodejs/ros/planning/msg/Ltp_plan.js
 planning_generate_messages_nodejs: CMakeFiles/planning_generate_messages_nodejs.dir/build.make
 
 .PHONY : planning_generate_messages_nodejs

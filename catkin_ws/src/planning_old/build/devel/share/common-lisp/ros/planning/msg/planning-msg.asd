@@ -1,0 +1,21 @@
+
+(cl:in-package :asdf)
+
+(defsystem "planning-msg"
+  :depends-on (:roslisp-msg-protocol :roslisp-utils )
+  :components ((:file "_package")
+    (:file "Car_info" :depends-on ("_package_Car_info"))
+    (:file "_package_Car_info" :depends-on ("_package"))
+    (:file "Command" :depends-on ("_package_Command"))
+    (:file "_package_Command" :depends-on ("_package"))
+    (:file "Ltp_stub_data" :depends-on ("_package_Ltp_stub_data"))
+    (:file "_package_Ltp_stub_data" :depends-on ("_package"))
+    (:file "Ray_cast" :depends-on ("_package_Ray_cast"))
+    (:file "_package_Ray_cast" :depends-on ("_package"))
+    (:file "State_machine" :depends-on ("_package_State_machine"))
+    (:file "_package_State_machine" :depends-on ("_package"))
+    (:file "Stp_stub_data" :depends-on ("_package_Stp_stub_data"))
+    (:file "_package_Stp_stub_data" :depends-on ("_package"))
+    (:file "Track_map" :depends-on ("_package_Track_map"))
+    (:file "_package_Track_map" :depends-on ("_package"))
+  ))

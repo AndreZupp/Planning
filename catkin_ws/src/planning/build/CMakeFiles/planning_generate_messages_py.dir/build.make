@@ -60,6 +60,8 @@ CMakeFiles/planning_generate_messages_py: devel/lib/python3/dist-packages/planni
 CMakeFiles/planning_generate_messages_py: devel/lib/python3/dist-packages/planning/msg/_Ltp_stub_data.py
 CMakeFiles/planning_generate_messages_py: devel/lib/python3/dist-packages/planning/msg/_Stp_stub_data.py
 CMakeFiles/planning_generate_messages_py: devel/lib/python3/dist-packages/planning/msg/_Command.py
+CMakeFiles/planning_generate_messages_py: devel/lib/python3/dist-packages/planning/msg/_Car_position.py
+CMakeFiles/planning_generate_messages_py: devel/lib/python3/dist-packages/planning/msg/_Ltp_plan.py
 CMakeFiles/planning_generate_messages_py: devel/lib/python3/dist-packages/planning/msg/__init__.py
 
 
@@ -85,16 +87,17 @@ devel/lib/python3/dist-packages/planning/msg/_Track_map.py: ../msg/Track_map.msg
 
 devel/lib/python3/dist-packages/planning/msg/_Ltp_stub_data.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 devel/lib/python3/dist-packages/planning/msg/_Ltp_stub_data.py: ../msg/Ltp_stub_data.msg
-devel/lib/python3/dist-packages/planning/msg/_Ltp_stub_data.py: ../msg/State_machine.msg
 devel/lib/python3/dist-packages/planning/msg/_Ltp_stub_data.py: ../msg/Track_map.msg
+devel/lib/python3/dist-packages/planning/msg/_Ltp_stub_data.py: ../msg/Car_position.msg
+devel/lib/python3/dist-packages/planning/msg/_Ltp_stub_data.py: ../msg/State_machine.msg
 devel/lib/python3/dist-packages/planning/msg/_Ltp_stub_data.py: ../msg/Car_info.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python from MSG planning/Ltp_stub_data"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ep/catkin_ws/src/planning/msg/Ltp_stub_data.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/lib/python3/dist-packages/planning/msg
 
 devel/lib/python3/dist-packages/planning/msg/_Stp_stub_data.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 devel/lib/python3/dist-packages/planning/msg/_Stp_stub_data.py: ../msg/Stp_stub_data.msg
-devel/lib/python3/dist-packages/planning/msg/_Stp_stub_data.py: ../msg/State_machine.msg
 devel/lib/python3/dist-packages/planning/msg/_Stp_stub_data.py: ../msg/Ray_cast.msg
+devel/lib/python3/dist-packages/planning/msg/_Stp_stub_data.py: ../msg/State_machine.msg
 devel/lib/python3/dist-packages/planning/msg/_Stp_stub_data.py: ../msg/Car_info.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python from MSG planning/Stp_stub_data"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/lib/python3/dist-packages/planning/msg
@@ -104,6 +107,16 @@ devel/lib/python3/dist-packages/planning/msg/_Command.py: ../msg/Command.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Python from MSG planning/Command"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ep/catkin_ws/src/planning/msg/Command.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/lib/python3/dist-packages/planning/msg
 
+devel/lib/python3/dist-packages/planning/msg/_Car_position.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+devel/lib/python3/dist-packages/planning/msg/_Car_position.py: ../msg/Car_position.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Python from MSG planning/Car_position"
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ep/catkin_ws/src/planning/msg/Car_position.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/lib/python3/dist-packages/planning/msg
+
+devel/lib/python3/dist-packages/planning/msg/_Ltp_plan.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+devel/lib/python3/dist-packages/planning/msg/_Ltp_plan.py: ../msg/Ltp_plan.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Python from MSG planning/Ltp_plan"
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/lib/python3/dist-packages/planning/msg
+
 devel/lib/python3/dist-packages/planning/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 devel/lib/python3/dist-packages/planning/msg/__init__.py: devel/lib/python3/dist-packages/planning/msg/_Car_info.py
 devel/lib/python3/dist-packages/planning/msg/__init__.py: devel/lib/python3/dist-packages/planning/msg/_State_machine.py
@@ -112,7 +125,9 @@ devel/lib/python3/dist-packages/planning/msg/__init__.py: devel/lib/python3/dist
 devel/lib/python3/dist-packages/planning/msg/__init__.py: devel/lib/python3/dist-packages/planning/msg/_Ltp_stub_data.py
 devel/lib/python3/dist-packages/planning/msg/__init__.py: devel/lib/python3/dist-packages/planning/msg/_Stp_stub_data.py
 devel/lib/python3/dist-packages/planning/msg/__init__.py: devel/lib/python3/dist-packages/planning/msg/_Command.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Python msg __init__.py for planning"
+devel/lib/python3/dist-packages/planning/msg/__init__.py: devel/lib/python3/dist-packages/planning/msg/_Car_position.py
+devel/lib/python3/dist-packages/planning/msg/__init__.py: devel/lib/python3/dist-packages/planning/msg/_Ltp_plan.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating Python msg __init__.py for planning"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ep/catkin_ws/src/planning/build/devel/lib/python3/dist-packages/planning/msg --initpy
 
 planning_generate_messages_py: CMakeFiles/planning_generate_messages_py
@@ -123,6 +138,8 @@ planning_generate_messages_py: devel/lib/python3/dist-packages/planning/msg/_Tra
 planning_generate_messages_py: devel/lib/python3/dist-packages/planning/msg/_Ltp_stub_data.py
 planning_generate_messages_py: devel/lib/python3/dist-packages/planning/msg/_Stp_stub_data.py
 planning_generate_messages_py: devel/lib/python3/dist-packages/planning/msg/_Command.py
+planning_generate_messages_py: devel/lib/python3/dist-packages/planning/msg/_Car_position.py
+planning_generate_messages_py: devel/lib/python3/dist-packages/planning/msg/_Ltp_plan.py
 planning_generate_messages_py: devel/lib/python3/dist-packages/planning/msg/__init__.py
 planning_generate_messages_py: CMakeFiles/planning_generate_messages_py.dir/build.make
 

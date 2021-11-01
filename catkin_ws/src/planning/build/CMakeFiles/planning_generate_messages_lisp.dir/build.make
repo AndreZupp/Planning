@@ -60,6 +60,8 @@ CMakeFiles/planning_generate_messages_lisp: devel/share/common-lisp/ros/planning
 CMakeFiles/planning_generate_messages_lisp: devel/share/common-lisp/ros/planning/msg/Ltp_stub_data.lisp
 CMakeFiles/planning_generate_messages_lisp: devel/share/common-lisp/ros/planning/msg/Stp_stub_data.lisp
 CMakeFiles/planning_generate_messages_lisp: devel/share/common-lisp/ros/planning/msg/Command.lisp
+CMakeFiles/planning_generate_messages_lisp: devel/share/common-lisp/ros/planning/msg/Car_position.lisp
+CMakeFiles/planning_generate_messages_lisp: devel/share/common-lisp/ros/planning/msg/Ltp_plan.lisp
 
 
 devel/share/common-lisp/ros/planning/msg/Car_info.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
@@ -84,16 +86,17 @@ devel/share/common-lisp/ros/planning/msg/Track_map.lisp: ../msg/Track_map.msg
 
 devel/share/common-lisp/ros/planning/msg/Ltp_stub_data.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 devel/share/common-lisp/ros/planning/msg/Ltp_stub_data.lisp: ../msg/Ltp_stub_data.msg
-devel/share/common-lisp/ros/planning/msg/Ltp_stub_data.lisp: ../msg/State_machine.msg
 devel/share/common-lisp/ros/planning/msg/Ltp_stub_data.lisp: ../msg/Track_map.msg
+devel/share/common-lisp/ros/planning/msg/Ltp_stub_data.lisp: ../msg/Car_position.msg
+devel/share/common-lisp/ros/planning/msg/Ltp_stub_data.lisp: ../msg/State_machine.msg
 devel/share/common-lisp/ros/planning/msg/Ltp_stub_data.lisp: ../msg/Car_info.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Lisp code from planning/Ltp_stub_data.msg"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ep/catkin_ws/src/planning/msg/Ltp_stub_data.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/share/common-lisp/ros/planning/msg
 
 devel/share/common-lisp/ros/planning/msg/Stp_stub_data.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 devel/share/common-lisp/ros/planning/msg/Stp_stub_data.lisp: ../msg/Stp_stub_data.msg
-devel/share/common-lisp/ros/planning/msg/Stp_stub_data.lisp: ../msg/State_machine.msg
 devel/share/common-lisp/ros/planning/msg/Stp_stub_data.lisp: ../msg/Ray_cast.msg
+devel/share/common-lisp/ros/planning/msg/Stp_stub_data.lisp: ../msg/State_machine.msg
 devel/share/common-lisp/ros/planning/msg/Stp_stub_data.lisp: ../msg/Car_info.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Lisp code from planning/Stp_stub_data.msg"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/share/common-lisp/ros/planning/msg
@@ -103,6 +106,16 @@ devel/share/common-lisp/ros/planning/msg/Command.lisp: ../msg/Command.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Lisp code from planning/Command.msg"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ep/catkin_ws/src/planning/msg/Command.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/share/common-lisp/ros/planning/msg
 
+devel/share/common-lisp/ros/planning/msg/Car_position.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+devel/share/common-lisp/ros/planning/msg/Car_position.lisp: ../msg/Car_position.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Lisp code from planning/Car_position.msg"
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ep/catkin_ws/src/planning/msg/Car_position.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/share/common-lisp/ros/planning/msg
+
+devel/share/common-lisp/ros/planning/msg/Ltp_plan.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+devel/share/common-lisp/ros/planning/msg/Ltp_plan.lisp: ../msg/Ltp_plan.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Lisp code from planning/Ltp_plan.msg"
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/share/common-lisp/ros/planning/msg
+
 planning_generate_messages_lisp: CMakeFiles/planning_generate_messages_lisp
 planning_generate_messages_lisp: devel/share/common-lisp/ros/planning/msg/Car_info.lisp
 planning_generate_messages_lisp: devel/share/common-lisp/ros/planning/msg/State_machine.lisp
@@ -111,6 +124,8 @@ planning_generate_messages_lisp: devel/share/common-lisp/ros/planning/msg/Track_
 planning_generate_messages_lisp: devel/share/common-lisp/ros/planning/msg/Ltp_stub_data.lisp
 planning_generate_messages_lisp: devel/share/common-lisp/ros/planning/msg/Stp_stub_data.lisp
 planning_generate_messages_lisp: devel/share/common-lisp/ros/planning/msg/Command.lisp
+planning_generate_messages_lisp: devel/share/common-lisp/ros/planning/msg/Car_position.lisp
+planning_generate_messages_lisp: devel/share/common-lisp/ros/planning/msg/Ltp_plan.lisp
 planning_generate_messages_lisp: CMakeFiles/planning_generate_messages_lisp.dir/build.make
 
 .PHONY : planning_generate_messages_lisp

@@ -60,6 +60,8 @@ CMakeFiles/planning_generate_messages_cpp: devel/include/planning/Track_map.h
 CMakeFiles/planning_generate_messages_cpp: devel/include/planning/Ltp_stub_data.h
 CMakeFiles/planning_generate_messages_cpp: devel/include/planning/Stp_stub_data.h
 CMakeFiles/planning_generate_messages_cpp: devel/include/planning/Command.h
+CMakeFiles/planning_generate_messages_cpp: devel/include/planning/Car_position.h
+CMakeFiles/planning_generate_messages_cpp: devel/include/planning/Ltp_plan.h
 
 
 devel/include/planning/Car_info.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
@@ -88,8 +90,9 @@ devel/include/planning/Track_map.h: /opt/ros/noetic/share/gencpp/msg.h.template
 
 devel/include/planning/Ltp_stub_data.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 devel/include/planning/Ltp_stub_data.h: ../msg/Ltp_stub_data.msg
-devel/include/planning/Ltp_stub_data.h: ../msg/State_machine.msg
 devel/include/planning/Ltp_stub_data.h: ../msg/Track_map.msg
+devel/include/planning/Ltp_stub_data.h: ../msg/Car_position.msg
+devel/include/planning/Ltp_stub_data.h: ../msg/State_machine.msg
 devel/include/planning/Ltp_stub_data.h: ../msg/Car_info.msg
 devel/include/planning/Ltp_stub_data.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from planning/Ltp_stub_data.msg"
@@ -97,8 +100,8 @@ devel/include/planning/Ltp_stub_data.h: /opt/ros/noetic/share/gencpp/msg.h.templ
 
 devel/include/planning/Stp_stub_data.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 devel/include/planning/Stp_stub_data.h: ../msg/Stp_stub_data.msg
-devel/include/planning/Stp_stub_data.h: ../msg/State_machine.msg
 devel/include/planning/Stp_stub_data.h: ../msg/Ray_cast.msg
+devel/include/planning/Stp_stub_data.h: ../msg/State_machine.msg
 devel/include/planning/Stp_stub_data.h: ../msg/Car_info.msg
 devel/include/planning/Stp_stub_data.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from planning/Stp_stub_data.msg"
@@ -110,6 +113,18 @@ devel/include/planning/Command.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from planning/Command.msg"
 	cd /home/ep/catkin_ws/src/planning && /home/ep/catkin_ws/src/planning/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ep/catkin_ws/src/planning/msg/Command.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/include/planning -e /opt/ros/noetic/share/gencpp/cmake/..
 
+devel/include/planning/Car_position.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+devel/include/planning/Car_position.h: ../msg/Car_position.msg
+devel/include/planning/Car_position.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from planning/Car_position.msg"
+	cd /home/ep/catkin_ws/src/planning && /home/ep/catkin_ws/src/planning/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ep/catkin_ws/src/planning/msg/Car_position.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/include/planning -e /opt/ros/noetic/share/gencpp/cmake/..
+
+devel/include/planning/Ltp_plan.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+devel/include/planning/Ltp_plan.h: ../msg/Ltp_plan.msg
+devel/include/planning/Ltp_plan.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ep/catkin_ws/src/planning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating C++ code from planning/Ltp_plan.msg"
+	cd /home/ep/catkin_ws/src/planning && /home/ep/catkin_ws/src/planning/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg -Iplanning:/home/ep/catkin_ws/src/planning/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Irosgraph_msgs:/opt/ros/noetic/share/rosgraph_msgs/cmake/../msg -p planning -o /home/ep/catkin_ws/src/planning/build/devel/include/planning -e /opt/ros/noetic/share/gencpp/cmake/..
+
 planning_generate_messages_cpp: CMakeFiles/planning_generate_messages_cpp
 planning_generate_messages_cpp: devel/include/planning/Car_info.h
 planning_generate_messages_cpp: devel/include/planning/State_machine.h
@@ -118,6 +133,8 @@ planning_generate_messages_cpp: devel/include/planning/Track_map.h
 planning_generate_messages_cpp: devel/include/planning/Ltp_stub_data.h
 planning_generate_messages_cpp: devel/include/planning/Stp_stub_data.h
 planning_generate_messages_cpp: devel/include/planning/Command.h
+planning_generate_messages_cpp: devel/include/planning/Car_position.h
+planning_generate_messages_cpp: devel/include/planning/Ltp_plan.h
 planning_generate_messages_cpp: CMakeFiles/planning_generate_messages_cpp.dir/build.make
 
 .PHONY : planning_generate_messages_cpp

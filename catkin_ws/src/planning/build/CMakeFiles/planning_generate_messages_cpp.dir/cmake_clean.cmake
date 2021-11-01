@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/planning_generate_messages_cpp"
   "devel/include/planning/Car_info.h"
+  "devel/include/planning/Car_position.h"
   "devel/include/planning/Command.h"
+  "devel/include/planning/Ltp_plan.h"
   "devel/include/planning/Ltp_stub_data.h"
   "devel/include/planning/Ray_cast.h"
   "devel/include/planning/State_machine.h"

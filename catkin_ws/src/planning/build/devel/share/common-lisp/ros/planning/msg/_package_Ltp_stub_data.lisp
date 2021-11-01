@@ -5,4 +5,6 @@
           MAP
           STATE_MACHINE-VAL
           STATE_MACHINE
+          CAR_POSITION-VAL
+          CAR_POSITION
 ))

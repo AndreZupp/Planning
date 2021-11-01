@@ -1,0 +1,192 @@
+; Auto-generated. Do not edit!
+
+
+(cl:in-package planning-msg)
+
+
+;//! \htmlinclude Ltp_plan.msg.html
+
+(cl:defclass <Ltp_plan> (roslisp-msg-protocol:ros-message)
+  ((pos_x_list
+    :reader pos_x_list
+    :initarg :pos_x_list
+    :type (cl:vector cl:integer)
+   :initform (cl:make-array 0 :element-type 'cl:integer :initial-element 0))
+   (pos_y_list
+    :reader pos_y_list
+    :initarg :pos_y_list
+    :type (cl:vector cl:integer)
+   :initform (cl:make-array 0 :element-type 'cl:integer :initial-element 0))
+   (speed
+    :reader speed
+    :initarg :speed
+    :type (cl:vector cl:float)
+   :initform (cl:make-array 0 :element-type 'cl:float :initial-element 0.0))
+   (angle
+    :reader angle
+    :initarg :angle
+    :type (cl:vector cl:float)
+   :initform (cl:make-array 0 :element-type 'cl:float :initial-element 0.0)))
+)
+
+(cl:defclass Ltp_plan (<Ltp_plan>)
+  ())
+
+(cl:defmethod cl:initialize-instance :after ((m <Ltp_plan>) cl:&rest args)
+  (cl:declare (cl:ignorable args))
+  (cl:unless (cl:typep m 'Ltp_plan)
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name planning-msg:<Ltp_plan> is deprecated: use planning-msg:Ltp_plan instead.")))
+
+(cl:ensure-generic-function 'pos_x_list-val :lambda-list '(m))
+(cl:defmethod pos_x_list-val ((m <Ltp_plan>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader planning-msg:pos_x_list-val is deprecated.  Use planning-msg:pos_x_list instead.")
+  (pos_x_list m))
+
+(cl:ensure-generic-function 'pos_y_list-val :lambda-list '(m))
+(cl:defmethod pos_y_list-val ((m <Ltp_plan>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader planning-msg:pos_y_list-val is deprecated.  Use planning-msg:pos_y_list instead.")
+  (pos_y_list m))
+
+(cl:ensure-generic-function 'speed-val :lambda-list '(m))
+(cl:defmethod speed-val ((m <Ltp_plan>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader planning-msg:speed-val is deprecated.  Use planning-msg:speed instead.")
+  (speed m))
+
+(cl:ensure-generic-function 'angle-val :lambda-list '(m))
+(cl:defmethod angle-val ((m <Ltp_plan>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader planning-msg:angle-val is deprecated.  Use planning-msg:angle instead.")
+  (angle m))
+(cl:defmethod roslisp-msg-protocol:serialize ((msg <Ltp_plan>) ostream)
+  "Serializes a message object of type '<Ltp_plan>"
+  (cl:let ((__ros_arr_len (cl:length (cl:slot-value msg 'pos_x_list))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_arr_len) ostream))
+  (cl:map cl:nil #'(cl:lambda (ele) (cl:write-byte (cl:ldb (cl:byte 8 0) ele) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 8) ele) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 16) ele) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 24) ele) ostream))
+   (cl:slot-value msg 'pos_x_list))
+  (cl:let ((__ros_arr_len (cl:length (cl:slot-value msg 'pos_y_list))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_arr_len) ostream))
+  (cl:map cl:nil #'(cl:lambda (ele) (cl:write-byte (cl:ldb (cl:byte 8 0) ele) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 8) ele) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 16) ele) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 24) ele) ostream))
+   (cl:slot-value msg 'pos_y_list))
+  (cl:let ((__ros_arr_len (cl:length (cl:slot-value msg 'speed))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_arr_len) ostream))
+  (cl:map cl:nil #'(cl:lambda (ele) (cl:let ((bits (roslisp-utils:encode-single-float-bits ele)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)))
+   (cl:slot-value msg 'speed))
+  (cl:let ((__ros_arr_len (cl:length (cl:slot-value msg 'angle))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_arr_len) ostream))
+  (cl:map cl:nil #'(cl:lambda (ele) (cl:let ((bits (roslisp-utils:encode-single-float-bits ele)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)))
+   (cl:slot-value msg 'angle))
+)
+(cl:defmethod roslisp-msg-protocol:deserialize ((msg <Ltp_plan>) istream)
+  "Deserializes a message object of type '<Ltp_plan>"
+  (cl:let ((__ros_arr_len 0))
+    (cl:setf (cl:ldb (cl:byte 8 0) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 8) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 16) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 24) __ros_arr_len) (cl:read-byte istream))
+  (cl:setf (cl:slot-value msg 'pos_x_list) (cl:make-array __ros_arr_len))
+  (cl:let ((vals (cl:slot-value msg 'pos_x_list)))
+    (cl:dotimes (i __ros_arr_len)
+    (cl:setf (cl:ldb (cl:byte 8 0) (cl:aref vals i)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 8) (cl:aref vals i)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 16) (cl:aref vals i)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 24) (cl:aref vals i)) (cl:read-byte istream)))))
+  (cl:let ((__ros_arr_len 0))
+    (cl:setf (cl:ldb (cl:byte 8 0) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 8) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 16) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 24) __ros_arr_len) (cl:read-byte istream))
+  (cl:setf (cl:slot-value msg 'pos_y_list) (cl:make-array __ros_arr_len))
+  (cl:let ((vals (cl:slot-value msg 'pos_y_list)))
+    (cl:dotimes (i __ros_arr_len)
+    (cl:setf (cl:ldb (cl:byte 8 0) (cl:aref vals i)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 8) (cl:aref vals i)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 16) (cl:aref vals i)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 24) (cl:aref vals i)) (cl:read-byte istream)))))
+  (cl:let ((__ros_arr_len 0))
+    (cl:setf (cl:ldb (cl:byte 8 0) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 8) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 16) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 24) __ros_arr_len) (cl:read-byte istream))
+  (cl:setf (cl:slot-value msg 'speed) (cl:make-array __ros_arr_len))
+  (cl:let ((vals (cl:slot-value msg 'speed)))
+    (cl:dotimes (i __ros_arr_len)
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:aref vals i) (roslisp-utils:decode-single-float-bits bits))))))
+  (cl:let ((__ros_arr_len 0))
+    (cl:setf (cl:ldb (cl:byte 8 0) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 8) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 16) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 24) __ros_arr_len) (cl:read-byte istream))
+  (cl:setf (cl:slot-value msg 'angle) (cl:make-array __ros_arr_len))
+  (cl:let ((vals (cl:slot-value msg 'angle)))
+    (cl:dotimes (i __ros_arr_len)
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:aref vals i) (roslisp-utils:decode-single-float-bits bits))))))
+  msg
+)
+(cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<Ltp_plan>)))
+  "Returns string type for a message object of type '<Ltp_plan>"
+  "planning/Ltp_plan")
+(cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'Ltp_plan)))
+  "Returns string type for a message object of type 'Ltp_plan"
+  "planning/Ltp_plan")
+(cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<Ltp_plan>)))
+  "Returns md5sum for a message object of type '<Ltp_plan>"
+  "84c9dd63f850849bf08d29bbdfe391dd")
+(cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'Ltp_plan)))
+  "Returns md5sum for a message object of type 'Ltp_plan"
+  "84c9dd63f850849bf08d29bbdfe391dd")
+(cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<Ltp_plan>)))
+  "Returns full string definition for message of type '<Ltp_plan>"
+  (cl:format cl:nil "uint32[] pos_x_list~%uint32[] pos_y_list~%float32[] speed~%float32[] angle~%~%"))
+(cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'Ltp_plan)))
+  "Returns full string definition for message of type 'Ltp_plan"
+  (cl:format cl:nil "uint32[] pos_x_list~%uint32[] pos_y_list~%float32[] speed~%float32[] angle~%~%"))
+(cl:defmethod roslisp-msg-protocol:serialization-length ((msg <Ltp_plan>))
+  (cl:+ 0
+     4 (cl:reduce #'cl:+ (cl:slot-value msg 'pos_x_list) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 4)))
+     4 (cl:reduce #'cl:+ (cl:slot-value msg 'pos_y_list) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 4)))
+     4 (cl:reduce #'cl:+ (cl:slot-value msg 'speed) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 4)))
+     4 (cl:reduce #'cl:+ (cl:slot-value msg 'angle) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 4)))
+))
+(cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <Ltp_plan>))
+  "Converts a ROS message object to a list"
+  (cl:list 'Ltp_plan
+    (cl:cons ':pos_x_list (pos_x_list msg))
+    (cl:cons ':pos_y_list (pos_y_list msg))
+    (cl:cons ':speed (speed msg))
+    (cl:cons ':angle (angle msg))
+))

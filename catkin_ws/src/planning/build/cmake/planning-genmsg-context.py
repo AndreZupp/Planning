@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/ep/catkin_ws/src/planning/msg/Car_info.msg;/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Ray_cast.msg;/home/ep/catkin_ws/src/planning/msg/Track_map.msg;/home/ep/catkin_ws/src/planning/msg/Ltp_stub_data.msg;/home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg;/home/ep/catkin_ws/src/planning/msg/Command.msg"
+messages_str = "/home/ep/catkin_ws/src/planning/msg/Car_info.msg;/home/ep/catkin_ws/src/planning/msg/State_machine.msg;/home/ep/catkin_ws/src/planning/msg/Ray_cast.msg;/home/ep/catkin_ws/src/planning/msg/Track_map.msg;/home/ep/catkin_ws/src/planning/msg/Ltp_stub_data.msg;/home/ep/catkin_ws/src/planning/msg/Stp_stub_data.msg;/home/ep/catkin_ws/src/planning/msg/Command.msg;/home/ep/catkin_ws/src/planning/msg/Car_position.msg;/home/ep/catkin_ws/src/planning/msg/Ltp_plan.msg"
 services_str = ""
 pkg_name = "planning"
 dependencies_str = "std_msgs;rosgraph_msgs"
