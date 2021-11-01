@@ -1,4 +1,0 @@
-Car_info car_info
-Track_map map
-State_machine state_machine
-Car_position car_position
