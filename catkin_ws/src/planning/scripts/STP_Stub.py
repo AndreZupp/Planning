@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import rospy
-from planning.msg import Stp_stub_data, Car_info, Ray_cast, State_machine
+from planning.msg import Stp_stub_data, Car_info, Ray_cast, State_machine, Car_position
 
 # car_info_msg:
 #   float32 speed 
@@ -51,7 +51,7 @@ def listener():
     rospy.Subscriber("CarInfo", Car_info, on_car_info_msg)
     rospy.Subscriber("StateMachine", State_machine, on_state_machine_msg)
     rospy.Subscriber("RayCast", Ray_cast, on_ray_cast_msg)
-    # TODO: Define msg from LTP to STP
+    rospy.Subscriber("RayCast", Ray_cast, on_ray_cast_msg)
 
     while not rospy.is_shutdown():
         # Check if we receieved all the data
@@ -65,6 +65,8 @@ def listener():
             ray_cast      = Ray_cast(*state['ray_cast'].values())
             state_machine = State_machine(*state['state_machine'].values())
             car_info      = Car_info(*state['car_info'].values())
+            # Here we retrive (if it's present) the desired speed & angle predicted by the LTP
+
             
             pub_stub_data.publish(ray_cast, state_machine, car_info)
             # Reset state

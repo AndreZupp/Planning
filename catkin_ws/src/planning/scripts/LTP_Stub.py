@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import rospy
-from planning.msg import Ltp_stub_data, Car_info, Track_map, State_machine
+from planning.msg import Ltp_stub_data, Car_info, State_machine
 
 # car_info_msg:
 #   float32 speed 
@@ -32,20 +32,6 @@ def on_state_machine_msg(state_machine_msg):
     rospy.loginfo(rospy.get_caller_id() + f"Received state_machine_msg")
 
 
-# track_map_msg
-#    uint8[] track_map 
-#    uint32 car_position_x
-#    uint32 car_position_y
-def on_track_map_msg(track_map_msg):
-    global state
-    state['track_map'] = {
-        'track_map': track_map_msg.track_map,
-        'car_position_x': track_map_msg.car_position_x,
-        'car_position_y': track_map_msg.car_position_y
-    }
-    rospy.loginfo(rospy.get_caller_id() + f"Received track_map_msg")
-
-
 def listener():
     rospy.init_node('Ltp_Stub_node', anonymous=True)
     global state
@@ -54,8 +40,6 @@ def listener():
 
     rospy.Subscriber("CarInfo", Car_info, on_car_info_msg)
     rospy.Subscriber("StateMachine", State_machine, on_state_machine_msg)
-    rospy.Subscriber("TrackMap", Ray_cast, on_track_map_msg)
-    # TODO: Define msg from LTP to Ltp
 
     while not rospy.is_shutdown():
         # Check if we receieved all the data
@@ -64,13 +48,13 @@ def listener():
 
             # Create a Ltp_sub_data.msg containing
             #   Car_info car_info
-            #   Track_map map
             #   State_machine state_machine
             track_map      = track_map(*state['track_map'].values())
             state_machine  = State_machine(*state['state_machine'].values())
             car_info       = Car_info(*state['car_info'].values())
+            car_position   = Car_position(*state['car_position'].values())
             
-            pub_stub_data.publish(track_map, state_machine, car_info)
+            pub_stub_data.publish(track_map, state_machine, car_info, car_position)
             # Reset state
             state = {}
  

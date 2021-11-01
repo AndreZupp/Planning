@@ -2,7 +2,7 @@
 
 from os import stat
 import rospy
-from planning.msg import Car_info, State_machine, Ray_cast, Track_map, Command
+from planning.msg import Car_info, State_machine, Ray_cast, Track_map, Command, Car_position
 import sys
 
 from rospy.timer import sleep
@@ -12,6 +12,7 @@ def talker():
     pub_car_info = rospy.Publisher('CarInfo', Car_info, queue_size=1)
     pub_state_machine = rospy.Publisher('StateMachine', State_machine, queue_size=1)
     pub_track_map = rospy.Publisher('TrackMap', Track_map, queue_size=1)
+    pub_car_position = rospy.Publisher('TrackMap', Car_position, queue_size=1)
     pub_raycast = rospy.Publisher('RayCast', Ray_cast, queue_size=1)
 
     rospy.init_node('Sensory', anonymous=True)
@@ -36,6 +37,11 @@ def talker():
         x, y = 0,0
         rospy.loginfo("Sending track-map message: " + str(x) + " " + str(y) + " " + "map")
         pub_track_map.publish(map, x, y)
+
+        # car_position message
+        car_x, car_y = 10,9
+        rospy.loginfo("Sending car_position message: " + str(x) + " " + str(y) + " " + "car_position")
+        pub_track_car_position.publish(car_position, x, y)
         
         # raycast message
         ray = [i for i in range(120)]

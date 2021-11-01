@@ -57,6 +57,8 @@ find_package(catkin REQUIRED COMPONENTS
    Ltp_stub_data.msg
    Stp_stub_data.msg
    Command.msg
+   Car_position.msg
+   Ltp_plan.msg
  )
 
 ## Generate services in the 'srv' folder
